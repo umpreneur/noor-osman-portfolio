@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Noor Osman, Brand & Packaging Designer</title>
+<title>Noor Osman — Brand & Packaging Design · Demo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -244,7 +244,7 @@
     name: "Noor Osman",
     first: "Noor",
     initials: "NO",
-    email: "hallo@noorosman.nl",       // ← verzonnen: vervang door het echte adres
+    email: "hallo@example.com",       // Voorbeeldadres voor deze demo
     location: "Rotterdam, NL",
     instagram: "@noorosman.design",    // ← verzonnen
     year: "2026",
@@ -278,6 +278,7 @@
 <!-- ====== HERO ====== -->
 <section class="hero" id="top">
   <div>
+    <span class="eyebrow reveal" data-t="demo.label"></span>
     <h1 class="reveal" data-t="hero.title"></h1>
     <p class="reveal" data-t="hero.text"></p>
     <div class="cta reveal">
@@ -324,28 +325,28 @@
     <article class="slide" style="--bg:#d6d6c4">
       <div class="s-top"><div><b>Zout &amp; Zeep</b>2025</div><span data-t="p1.cat"></span></div>
       <h4 data-t="p1.head"></h4>
-      <div class="s-foot"><span data-t="p1.tags"></span><a href="#" class="pill" data-t="view"></a></div>
+      <div class="s-foot"><span data-t="p1.tags"></span><span class="pill" data-t="view"></span></div>
       <img class="s-img" src="img/zout-zeep.svg" alt="Zout &amp; Zeep soap packaging" draggable="false">
       <div class="wm">ZEEP</div>
     </article>
     <article class="slide" style="--bg:#e7dbc8">
       <div class="s-top"><div><b>Bakkerij Bloem</b>2025</div><span data-t="p2.cat"></span></div>
       <h4 data-t="p2.head"></h4>
-      <div class="s-foot"><span data-t="p2.tags"></span><a href="#" class="pill" data-t="view"></a></div>
+      <div class="s-foot"><span data-t="p2.tags"></span><span class="pill" data-t="view"></span></div>
       <img class="s-img" src="img/bakkerij-bloem.svg" alt="Bakkerij Bloem bread bag and sticker" draggable="false">
       <div class="wm">BLOEM</div>
     </article>
     <article class="slide dark" style="--bg:#8c5a45">
       <div class="s-top"><div><b>Mira Thee</b>2024</div><span data-t="p3.cat"></span></div>
       <h4 data-t="p3.head"></h4>
-      <div class="s-foot"><span data-t="p3.tags"></span><a href="#" class="pill" data-t="view"></a></div>
+      <div class="s-foot"><span data-t="p3.tags"></span><span class="pill" data-t="view"></span></div>
       <img class="s-img" src="img/mira-thee.svg" alt="Mira tea tins" draggable="false">
       <div class="wm">MIRA</div>
     </article>
     <article class="slide" style="--bg:#e2d6cc">
       <div class="s-top"><div><b>Studio Veld</b>2024</div><span data-t="p4.cat"></span></div>
       <h4 data-t="p4.head"></h4>
-      <div class="s-foot"><span data-t="p4.tags"></span><a href="#" class="pill" data-t="view"></a></div>
+      <div class="s-foot"><span data-t="p4.tags"></span><span class="pill" data-t="view"></span></div>
       <img class="s-img" src="img/studio-veld.svg" alt="Studio Veld website and logo" draggable="false">
       <div class="wm">VELD</div>
     </article>
@@ -389,7 +390,8 @@
 
 <footer>
   <span>© <span data-me="year"></span> <span data-me="name"></span></span>
-  <!-- ← vervang # door de echte profiel-links -->
+  <span data-t="demo.note"></span>
+  <!-- Voorbeeldprofielen voor deze demo -->
   <div class="soc"><a href="#" target="_blank" rel="noopener">Instagram</a><a href="#" target="_blank" rel="noopener">LinkedIn</a><a href="#" target="_blank" rel="noopener">Behance</a></div>
 </footer>
 
@@ -401,63 +403,67 @@
       "role": "Brand & Packaging Designer", "badge.role": "Designer",
       "edu": "Willem de Kooning Academie",
       "nav.about": "About", "nav.work": "Work", "nav.process": "Process", "nav.contact": "Contact",
-      "hero.title": `Hello, I'm <em>${ME.first}</em>.<br>I design brands and<br>packaging you want to <em>hold.</em>`,
-      "hero.text": "Independent brand & packaging designer in Rotterdam. I help small makers, food brands and studios look as good as what they make.",
+      "hero.title": `Hello, I'm <em>${ME.first}</em>.<br>I give brands <em>character.</em><br>And packaging a reason<br>to be <em>picked up.</em>`,
+      "hero.text": "Brand identities and packaging for independent makers, food brands and studios. Thoughtful design that brings the story behind each product to life.",
       "hero.cta": "View my work", "hero.link": "Get in touch",
       "about.eyebrow": "About",
-      "about.title": "For five years I have helped small brands feel <em>considered</em>, on the shelf, on paper and on screen.",
+      "about.title": "Every brand has a story. I translate it into a <em>distinctive identity</em>, from type and colour to packaging and print.",
       "f.name": "Name", "f.role": "Role", "f.location": "Based in", "f.edu": "Studied", "f.email": "Email",
-      "verified": "Open for <em>new projects.</em>",
+      "verified": "A portfolio of <em>design concepts.</em>",
       "skills": list(["Brand identity", "Packaging", "Typography", "Print", "Illustration", "Web design"]),
-      "work.eyebrow": "Case studies",
+      "work.eyebrow": "Fictional projects",
       "work.title": "Selected <em>work</em>",
-      "view": "View project",
-      "p1.cat": "Packaging", "p1.head": "Natural soap from the North Sea coast. <em>Wrapped in paper, not plastic.</em>", "p1.tags": "Packaging, identity and labels",
-      "p2.cat": "Brand identity", "p2.head": "A family bakery since 1962, <em>freshly rebranded.</em>", "p2.tags": "Logo, bags and signage",
-      "p3.cat": "Packaging", "p3.head": "Loose tea in tins that <em>stay on the shelf.</em>", "p3.tags": "Tins, labels and illustration",
-      "p4.cat": "Identity and website", "p4.head": "An architecture studio that builds with <em>light and space.</em>", "p4.tags": "Logo, website and stationery",
+      "view": "Demo project",
+      "p1.cat": "Packaging", "p1.head": "Coastal soap.<br><em>A naturally simple identity.</em>", "p1.tags": "Packaging, identity and labels",
+      "p2.cat": "Brand identity", "p2.head": "A fresh identity.<br><em>Rooted in the craft of baking.</em>", "p2.tags": "Logo, bags and signage",
+      "p3.cat": "Packaging", "p3.head": "Loose-leaf tea.<br><em>Tins worth keeping.</em>", "p3.tags": "Tins, labels and illustration",
+      "p4.cat": "Identity and website", "p4.head": "An architectural identity.<br><em>Built around light and space.</em>", "p4.tags": "Logo, website and stationery",
       "process.eyebrow": "Process", "process.title": "How I <em>work</em>",
-      "s1.t": "Listen", "s1.p": "A first conversation about your product, your customers and what makes you different.",
-      "s2.t": "Concept", "s2.p": "Two or three clear directions with moodboards, sketches, type and colour.",
-      "s3.t": "Design", "s3.p": "Working out one direction in detail, with real mockups and printed proofs.",
-      "s4.t": "Deliver", "s4.p": "Print-ready files, brand guidelines and help with the printer if you need it.",
-      "contact.title": `Let's create something <em>beautiful.</em>`,
-      "contact.text": "Working on a new brand or product? Tell me about it. I usually reply within two working days.",
-      "contact.cta": "Send a message",
+      "s1.t": "Discover", "s1.p": "We explore your brand, your product and the people you want to reach. Together, we define what the design should communicate.",
+      "s2.t": "Richting bepalen", "s2.p": "I develop two or three creative directions, using moodboards, sketches, typography and colour to make each idea tangible.",
+      "s3.t": "Design", "s3.p": "We choose a direction and refine every detail. Mock-ups and print proofs show how the design works in practice.",
+      "s4.t": "Deliver", "s4.p": "You receive print-ready files and clear brand guidelines, with support coordinating production when needed.",
+      "contact.title": `Good design starts<br>with a <em>conversation.</em>`,
+      "contact.text": "This is a demo portfolio. The designer profile, projects and contact details are fictional and illustrate how a portfolio could look.",
+      "contact.cta": "Explore the concepts",
+      "demo.label": "Demo portfolio",
+      "demo.note": "Demo · Fictional profile, projects and contact details.",
     },
     nl: {
-      "role": "Brand & Packaging Designer", "badge.role": "Designer",
+      "role": "Merk- en verpakkingsontwerper", "badge.role": "Ontwerper",
       "edu": "Willem de Kooning Academie",
-      "nav.about": "Over", "nav.work": "Werk", "nav.process": "Werkwijze", "nav.contact": "Contact",
-      "hero.title": `Hallo, ik ben <em>${ME.first}</em>.<br>Ik ontwerp merken en<br>verpakkingen om <em>vast te houden.</em>`,
-      "hero.text": "Zelfstandig brand- en verpakkingsontwerper in Rotterdam. Ik help kleine makers, foodmerken en studio's er net zo goed uit te zien als wat ze maken.",
+      "nav.about": "Over mij", "nav.work": "Werk", "nav.process": "Werkwijze", "nav.contact": "Contact",
+      "hero.title": `Hallo, ik ben <em>${ME.first}</em>.<br>Merken met <em>karakter.</em><br>Verpakkingen die je<br>wilt <em>oppakken.</em>`,
+      "hero.text": "Merkidentiteiten en verpakkingen voor kleine makers, voedingsmerken en studio's. Doordacht ontwerp dat het verhaal achter het product zichtbaar maakt.",
       "hero.cta": "Bekijk mijn werk", "hero.link": "Neem contact op",
       "about.eyebrow": "Over mij",
-      "about.title": "Al vijf jaar help ik kleine merken om <em>doordacht</em> over te komen, in het schap, op papier en op het scherm.",
+      "about.title": "Elk merk heeft een verhaal. Ik vertaal het naar een <em>eigen gezicht</em>, van lettertype en kleur tot verpakking en drukwerk.",
       "f.name": "Naam", "f.role": "Rol", "f.location": "Locatie", "f.edu": "Opleiding", "f.email": "E-mail",
-      "verified": "Beschikbaar voor <em>nieuwe projecten.</em>",
+      "verified": "Een portfolio vol <em>ontwerpconcepten.</em>",
       "skills": list(["Merkidentiteit", "Verpakking", "Typografie", "Drukwerk", "Illustratie", "Webdesign"]),
-      "work.eyebrow": "Cases",
-      "work.title": "Geselecteerd <em>werk</em>",
-      "view": "Bekijk project",
-      "p1.cat": "Verpakking", "p1.head": "Natuurlijke zeep van de Noordzeekust. <em>Verpakt in papier, niet in plastic.</em>", "p1.tags": "Verpakking, identiteit en etiketten",
-      "p2.cat": "Merkidentiteit", "p2.head": "Een familiebakkerij sinds 1962, <em>vers vernieuwd.</em>", "p2.tags": "Logo, broodzakken en bewegwijzering",
-      "p3.cat": "Verpakking", "p3.head": "Losse thee in blikken die je <em>wilt laten staan.</em>", "p3.tags": "Blikken, etiketten en illustratie",
-      "p4.cat": "Identiteit en website", "p4.head": "Een architectenbureau dat bouwt met <em>licht en ruimte.</em>", "p4.tags": "Logo, website en drukwerk",
+      "work.eyebrow": "Fictieve projecten",
+      "work.title": "Uitgelicht <em>werk</em>",
+      "view": "Demoproject",
+      "p1.cat": "Verpakking", "p1.head": "Zeep van de kust.<br><em>Een natuurlijk eenvoudige identiteit.</em>", "p1.tags": "Verpakking, identiteit en etiketten",
+      "p2.cat": "Merkidentiteit", "p2.head": "Een frisse identiteit.<br><em>Geworteld in het bakkersvak.</em>", "p2.tags": "Logo, broodzakken en bewegwijzering",
+      "p3.cat": "Verpakking", "p3.head": "Losse thee.<br><em>Blikken om te bewaren.</em>", "p3.tags": "Blikken, etiketten en illustratie",
+      "p4.cat": "Identiteit en website", "p4.head": "Een architectonische identiteit.<br><em>Gebouwd op licht en ruimte.</em>", "p4.tags": "Logo, website en drukwerk",
       "process.eyebrow": "Proces", "process.title": "Mijn <em>werkwijze</em>",
-      "s1.t": "Luisteren", "s1.p": "Een eerste gesprek over je product, je klanten en wat jou anders maakt.",
-      "s2.t": "Concept", "s2.p": "Twee of drie heldere richtingen met moodboards, schetsen, letter en kleur.",
-      "s3.t": "Ontwerpen", "s3.p": "Eén richting tot in detail uitwerken, met echte mockups en drukproeven.",
-      "s4.t": "Opleveren", "s4.p": "Drukklare bestanden, merkrichtlijnen en hulp bij de drukker als je dat wilt.",
-      "contact.title": `Laten we iets <em>moois</em> maken.`,
-      "contact.text": "Werk je aan een nieuw merk of product? Vertel me erover. Ik reageer meestal binnen twee werkdagen.",
-      "contact.cta": "Stuur een bericht",
+      "s1.t": "Kennismaken", "s1.p": "We bespreken je merk, je product en de mensen die je wilt bereiken. Samen bepalen we wat het ontwerp moet overbrengen.",
+      "s2.t": "Richting bepalen", "s2.p": "Ik werk twee of drie ontwerprichtingen uit. Moodboards, schetsen, typografie en kleur maken de ideeën concreet.",
+      "s3.t": "Ontwerpen", "s3.p": "We kiezen een richting en verfijnen elk detail. Met mock-ups en drukproeven bekijken we hoe het ontwerp in de praktijk werkt.",
+      "s4.t": "Opleveren", "s4.p": "Je ontvangt drukklare bestanden en heldere merkrichtlijnen. Waar nodig help ik met de afstemming met de drukker.",
+      "contact.title": `Goed ontwerp begint<br>met een <em>gesprek.</em>`,
+      "contact.text": "Dit is een demoportfolio. Het ontwerpersprofiel, de projecten en de contactgegevens zijn fictief en laten zien hoe een portfolio eruit kan zien.",
+      "contact.cta": "Bekijk de concepten",
+      "demo.label": "Demoportfolio",
+      "demo.note": "Demo · Fictief profiel, projecten en contactgegevens.",
     }
   };
 
   /* ---- vaste gegevens ---- */
   document.querySelectorAll("[data-me]").forEach(el => el.textContent = ME[el.dataset.me]);
-  document.getElementById("mail").href = "mailto:" + ME.email;
+  document.getElementById("mail").href = "#werk";
 
   /* ---- badge: monogram, geen gezicht ---- */
   const badgeHTML = `

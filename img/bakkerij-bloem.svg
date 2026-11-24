@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Bakkerij Bloem — broodzak + sticker + kaartje -->
+  <ellipse cx="200" cy="344" rx="150" ry="10" fill="#2a2622" opacity=".08"/>
+  <!-- broodzak -->
+  <path d="M150 70 h120 l8 270 h-136 z" fill="#d2bd9c"/>
+  <path d="M150 70 h120 l-4 16 h-112 z" fill="#c3ac88"/>
+  <path d="M150 70 l6 -10 h108 l6 10" fill="#c3ac88"/>
+  <!-- stokbrood steekt uit -->
+  <path d="M232 70 c4 -40 22 -58 34 -54 c12 4 2 34 -14 56 z" fill="#b98d5f"/>
+  <path d="M244 40 l12 6 M240 52 l12 6" stroke="#9e7347" stroke-width="2"/>
+  <!-- ronde sticker -->
+  <circle cx="211" cy="196" r="44" fill="#f5efe4"/>
+  <circle cx="211" cy="196" r="38" fill="none" stroke="#9a5b42" stroke-width="1"/>
+  <g transform="translate(211 180)" fill="#9a5b42">
+    <ellipse cx="0" cy="-7" rx="4" ry="7"/><ellipse cx="0" cy="7" rx="4" ry="7"/>
+    <ellipse cx="-7" cy="0" rx="7" ry="4"/><ellipse cx="7" cy="0" rx="7" ry="4"/>
+    <circle r="3" fill="#f5efe4"/>
+  </g>
+  <text x="211" y="210" font-family="Georgia, serif" font-size="15" text-anchor="middle" fill="#2a2622">Bloem</text>
+  <text x="211" y="222" font-family="Arial, sans-serif" font-size="5.5" letter-spacing="2" text-anchor="middle" fill="#8a7e6e">BAKKERIJ · SINDS 1962</text>
+  <!-- kaartje -->
+  <g transform="rotate(-7 110 290)">
+    <rect x="50" y="250" width="120" height="76" rx="3" fill="#9a5b42"/>
+    <text x="110" y="286" font-family="Georgia, serif" font-style="italic" font-size="16" text-anchor="middle" fill="#f5efe4">Vers</text>
+    <text x="110" y="302" font-family="Arial, sans-serif" font-size="6" letter-spacing="2" text-anchor="middle" fill="#ecd9c9">ELKE OCHTEND</text>
+  </g>
+</svg>

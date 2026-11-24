@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Mira Thee — theeblikken (op donkere kaart) -->
+  <ellipse cx="200" cy="346" rx="150" ry="10" fill="#000" opacity=".14"/>
+  <!-- blik 1 -->
+  <rect x="62" y="118" width="86" height="224" rx="6" fill="#efe6d8"/>
+  <rect x="58" y="104" width="94" height="22" rx="5" fill="#ddcfbb"/>
+  <rect x="62" y="190" width="86" height="80" fill="#b8b8a0"/>
+  <text x="105" y="225" font-family="Georgia, serif" font-size="20" text-anchor="middle" fill="#2a2622">Mira</text>
+  <text x="105" y="244" font-family="Arial, sans-serif" font-size="6" letter-spacing="2" text-anchor="middle" fill="#2a2622">GROENE THEE</text>
+  <!-- blik 2 (voor, groter) -->
+  <rect x="158" y="96" width="98" height="246" rx="6" fill="#f6efe4"/>
+  <rect x="154" y="82" width="106" height="24" rx="5" fill="#ddcfbb"/>
+  <rect x="158" y="178" width="98" height="90" fill="#2a2622"/>
+  <text x="207" y="218" font-family="Georgia, serif" font-size="23" text-anchor="middle" fill="#f6efe4">Mira</text>
+  <text x="207" y="240" font-family="Arial, sans-serif" font-size="6" letter-spacing="2" text-anchor="middle" fill="#cdbfa9">ZWARTE THEE · KARDEMOM</text>
+  <text x="207" y="320" font-family="Arial, sans-serif" font-size="6" letter-spacing="2" text-anchor="middle" fill="#8a7e6e">80 G · LOSSE THEE</text>
+  <!-- blik 3 -->
+  <rect x="266" y="138" width="80" height="204" rx="6" fill="#ece2d2"/>
+  <rect x="262" y="124" width="88" height="20" rx="5" fill="#ddcfbb"/>
+  <rect x="266" y="200" width="80" height="72" fill="#c6ae8f"/>
+  <text x="306" y="234" font-family="Georgia, serif" font-size="18" text-anchor="middle" fill="#2a2622">Mira</text>
+  <text x="306" y="252" font-family="Arial, sans-serif" font-size="6" letter-spacing="2" text-anchor="middle" fill="#2a2622">ROOIBOS</text>
+</svg>

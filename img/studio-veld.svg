@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Studio Veld — website op laptop + logo -->
+  <ellipse cx="200" cy="318" rx="170" ry="9" fill="#2a2622" opacity=".08"/>
+  <!-- laptop -->
+  <rect x="58" y="92" width="284" height="186" rx="10" fill="#2a2622"/>
+  <rect x="66" y="100" width="268" height="170" rx="3" fill="#f6f1e8"/>
+  <path d="M34 278 h332 l-14 22 h-304 z" fill="#cfc4b4"/>
+  <rect x="176" y="278" width="48" height="6" rx="3" fill="#b9ad9b"/>
+  <!-- site -->
+  <text x="80" y="122" font-family="Georgia, serif" font-size="12" fill="#2a2622">Veld</text>
+  <g font-family="Arial, sans-serif" font-size="5.5" letter-spacing="1.4" fill="#8a7e6e">
+    <text x="236" y="121">PROJECTEN</text><text x="282" y="121">STUDIO</text><text x="312" y="121">CONTACT</text>
+  </g>
+  <text x="80" y="168" font-family="Georgia, serif" font-size="22" fill="#2a2622">Bouwen met</text>
+  <text x="80" y="192" font-family="Georgia, serif" font-style="italic" font-size="22" fill="#9a5b42">licht en ruimte.</text>
+  <rect x="80" y="214" width="54" height="14" rx="7" fill="#2a2622"/>
+  <rect x="214" y="138" width="106" height="118" fill="#c6ae8f"/>
+  <path d="M214 256 l40 -46 l26 28 l14 -14 l26 32 z" fill="#b39a79"/>
+  <rect x="236" y="160" width="18" height="18" fill="#efe6d8"/>
+  <!-- logo-tegel -->
+  <g transform="rotate(-6 92 314)">
+    <rect x="46" y="286" width="92" height="56" rx="3" fill="#9a5b42"/>
+    <path d="M70 324 l10 -18 l10 18 z M92 324 l10 -18 l10 18 z" fill="none" stroke="#f3ede3" stroke-width="1.4"/>
+    <line x1="64" y1="324" x2="120" y2="324" stroke="#f3ede3" stroke-width="1.4"/>
+  </g>
+</svg>

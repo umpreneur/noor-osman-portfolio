@@ -323,6 +323,11 @@
   nav{opacity:1;transform:translateY(0);transition:opacity 1.2s ease .15s,transform 1.4s var(--ease) .15s,box-shadow .6s var(--ease)}
   body:not(.intro-complete) nav{opacity:0;transform:translateY(-5px);pointer-events:none}
   @media(prefers-reduced-motion:reduce){nav{transition:none;transform:none}}
+
+  .about{grid-template-columns:minmax(280px,1fr) minmax(0,1.3fr);gap:clamp(32px,5vw,80px)}
+  .about-illustration{width:100%;max-width:440px;justify-self:center}
+  .about-illustration img{display:block;width:100%;height:auto;mix-blend-mode:multiply}
+  @media(max-width:860px){.about{grid-template-columns:1fr}.about-illustration{max-width:350px}}
 </style>
 </head>
 <body>
@@ -379,7 +384,7 @@
 <!-- ====== ABOUT ====== -->
 <section id="over">
   <div class="about">
-    <div class="card reveal" id="badge2"></div>
+    <div class="about-illustration reveal"><img src="img/noor-line-illustration.png" alt="Lijnillustratie van een laptop en een hand die schetst" width="1254" height="1254" loading="lazy"></div>
     <div class="reveal">
       <span class="eyebrow" data-t="about.eyebrow"></span>
       <h2 class="about-heading" data-t="about.heading"></h2>
@@ -542,7 +547,7 @@
     <div class="portrait" aria-hidden="true"></div>
     <div class="card-name"><div><div class="n">${ME.name}</div><small data-t="badge.role"></small></div></div>`;
   document.getElementById("badge").innerHTML = badgeHTML;
-  document.getElementById("badge2").innerHTML = badgeHTML;
+
 
 
   /* ---- taal wisselen ---- */

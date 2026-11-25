@@ -336,6 +336,14 @@
     .hero .badge-stage{grid-row:1;width:100%}
     .hero > div:first-child{grid-row:2}
   }
+
+  /* Phone-only: keep the whole swinging badge above the introduction. */
+  @media(max-width:640px){
+    .hero{padding-top:80px;gap:24px}
+    .hero .badge-stage{height:470px;padding-top:0;overflow:visible}
+    .hero .swing{top:-260px}
+    .hero > div:first-child{position:relative}
+  }
 </style>
 </head>
 <body>

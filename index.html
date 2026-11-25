@@ -670,8 +670,8 @@
   addEventListener("load", () => {
     const finishEntrance = () => {
       document.body.classList.add("intro-complete");
-      angle = 0; vel = 0;
-      swing.style.transform = "rotate(0deg)";
+      angle = reduce ? 0 : 6; vel = 0;
+      swing.style.transform = `rotate(${angle}deg)`;
     };
     if (reduce) { finishEntrance(); return; }
     const entrance = swing.animate([
@@ -681,6 +681,7 @@
     entrance.finished.then(() => {
       finishEntrance();
       entrance.cancel();
+      start();
     });
   });
   const io = new IntersectionObserver(es => es.forEach(e => {

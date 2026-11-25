@@ -296,8 +296,8 @@
   }
 
   /* The actual lanyard and badge enter together; no separate intro copy. */
-  body:not(.intro-complete) .hero > div:first-child{opacity:0;transform:translateY(16px)}
-  .hero > div:first-child{transition:opacity .9s var(--ease),transform .9s var(--ease)}
+  body:not(.intro-complete) .hero > div:first-child{opacity:0;transform:translateY(-6px)}
+  .hero > div:first-child{transition:opacity 1.5s ease,transform 1.8s cubic-bezier(.22,1,.36,1);transition-delay:.15s}
   body:not(.intro-complete) .swing{transform:translateY(-110vh)}
   body:not(.intro-complete) .badge-stage{overflow:visible}
   @media(prefers-reduced-motion:reduce){
@@ -316,6 +316,9 @@
   .swing .clip{margin-left:0}
   .swing .card{margin-left:0}
   .swing{width:250px;margin-left:-125px}
+
+  .hero > div:first-child .reveal{transform:none;transition-delay:0ms!important}
+  @media(prefers-reduced-motion:reduce){.hero > div:first-child{transition:none;transform:none}}
 </style>
 </head>
 <body>

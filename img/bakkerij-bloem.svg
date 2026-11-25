@@ -17,7 +17,7 @@
     <circle r="3" fill="#f5efe4"/>
   </g>
   <text x="211" y="210" font-family="Georgia, serif" font-size="15" text-anchor="middle" fill="#2a2622">Bloem</text>
-  <text x="211" y="222" font-family="Arial, sans-serif" font-size="5.5" letter-spacing="2" text-anchor="middle" fill="#8a7e6e">BAKKERIJ · SINDS 1962</text>
+  <text x="211" y="222" font-family="Arial, sans-serif" font-size="4.2" letter-spacing=".55" textLength="66" lengthAdjust="spacingAndGlyphs" text-anchor="middle" fill="#8a7e6e">BAKKERIJ · SINDS 1962</text>
   <!-- kaartje -->
   <g transform="rotate(-7 110 290)">
     <rect x="50" y="250" width="120" height="76" rx="3" fill="#9a5b42"/>

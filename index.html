@@ -101,7 +101,7 @@
 
   /* ---------- About ---------- */
   .about{display:grid;grid-template-columns:280px 1fr;gap:clamp(40px,7vw,110px);align-items:center;max-width:1160px;margin:0 auto}
-  .about .card{margin:0;transform:rotate(-2deg)}
+  .about .card{margin:0;transform:none}
   .about-intro{font-size:18px;line-height:1.8;max-width:540px;margin-bottom:24px}
   .fields{display:grid;grid-template-columns:1fr}
   .field{padding:12px 0}
@@ -238,7 +238,7 @@
   .btn-contact{background:var(--accent)}
   .btn-contact:hover{background:var(--accent-dark)}
   .about{grid-template-columns:320px minmax(0,1fr);gap:clamp(40px,6vw,90px)}
-  .about .card{width:300px;transform:rotate(-5deg)}
+  .about .card{width:300px;transform:none}
   .about-heading{font-family:var(--serif);font-weight:400;font-size:clamp(36px,4vw,56px);line-height:1.08;margin-bottom:24px}
   .about-intro{max-width:480px}
   .about .skills{gap:10px 22px;margin-top:26px;font-size:12px}
@@ -249,11 +249,25 @@
   .card-name{margin-top:20px}
   @media(max-width:860px){.about{grid-template-columns:1fr;gap:48px}.about .card{justify-self:center}}
   @media(max-width:640px){
-    .about .card{width:min(300px,100%);transform:rotate(-3deg)}
+    .about .card{width:min(300px,100%);transform:none}
     .badge-stage .card{transform:none}
     .about-heading{font-size:38px}
     .about .skills{gap:10px 16px}
   }
+
+  /* Keep project copy and original artwork in separate columns. */
+  @media(min-width:641px){
+    .slide{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);grid-template-rows:auto 1fr auto;gap:16px 22px}
+    .slide .s-top{grid-column:1/-1}
+    .slide h4{grid-column:1;grid-row:2;max-width:none;align-self:center;margin-top:0}
+    .slide .s-img{position:static;grid-column:2;grid-row:2;width:100%;height:100%;min-height:0;object-fit:contain}
+    .slide .s-foot{grid-column:1/-1;grid-row:3}
+  }
+  .step{background:var(--paper-2);border-radius:22px;padding:28px 24px;position:relative;overflow:hidden}
+  .step:nth-child(even){background:var(--stone)}
+  .step .k{font-family:var(--serif);font-size:58px;line-height:1;color:var(--accent);letter-spacing:-.04em}
+  .step h5{margin-top:26px}
+  @media(max-width:640px){.step{padding:24px}.step .k{font-size:48px}}
 </style>
 </head>
 <body>
@@ -477,7 +491,7 @@
     <div class="hole"></div>
     <div class="card-top"><span>Portfolio ’${ME.year.slice(2)}</span></div>
     
-    <div class="portrait" aria-hidden="true"><div class="badge-art"></div></div>
+    <div class="portrait" aria-hidden="true"></div>
     <div class="card-name"><div><div class="n">${ME.name}</div><small data-t="badge.role"></small></div></div>`;
   document.getElementById("badge").innerHTML = badgeHTML;
   document.getElementById("badge2").innerHTML = badgeHTML;
@@ -563,8 +577,7 @@
     const stopAuto = () => { clearTimeout(autoTimer); autoTimer = 0; };
     const scheduleAuto = () => {
       stopAuto();
-      if (reduce || !carouselVisible || document.hidden || down ||
-          section.matches(":hover") || section.contains(document.activeElement)) return;
+      if (reduce || !carouselVisible || document.hidden || down) return;
       autoTimer = setTimeout(() => { cur = (cur + 1) % n; layout(); scheduleAuto(); }, 5000);
     };
     const go = d => { cur = (cur + d + n) % n; layout(); scheduleAuto(); };
@@ -599,10 +612,7 @@
     addEventListener("pointercancel", () => {
       down = false; wrap.classList.remove("drag"); layout(); scheduleAuto();
     });
-    section.addEventListener("mouseenter", stopAuto);
-    section.addEventListener("mouseleave", scheduleAuto);
-    section.addEventListener("focusin", stopAuto);
-    section.addEventListener("focusout", () => setTimeout(scheduleAuto, 0));
+
     document.addEventListener("visibilitychange", scheduleAuto);
     new IntersectionObserver(([entry]) => {
       carouselVisible = entry.isIntersecting; scheduleAuto();

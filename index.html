@@ -304,6 +304,18 @@
     body:not(.intro-complete) .hero > div:first-child{opacity:1;transform:none}
     body:not(.intro-complete) .swing{transform:none}
   }
+
+  body:not(.intro-complete) nav,
+  body:not(.intro-complete) section:not(.hero),
+  body:not(.intro-complete) footer{visibility:hidden;opacity:0;pointer-events:none}
+  nav{transition:opacity .7s var(--ease),box-shadow .6s var(--ease)}
+  body:not(.intro-complete){overflow:hidden}
+  .strap{flex-shrink:0}
+  .swing{display:flex;flex-direction:column;align-items:center}
+  .swing .strap{margin-left:0}
+  .swing .clip{margin-left:0}
+  .swing .card{margin-left:0}
+  .swing{width:250px;margin-left:-125px}
 </style>
 </head>
 <body>

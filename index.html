@@ -294,6 +294,16 @@
     .intro-card .portrait{height:180px}
     .back-card{padding:22px}
   }
+
+  /* The actual lanyard and badge enter together; no separate intro copy. */
+  body:not(.intro-complete) .hero > div:first-child{opacity:0;transform:translateY(16px)}
+  .hero > div:first-child{transition:opacity .9s var(--ease),transform .9s var(--ease)}
+  body:not(.intro-complete) .swing{transform:translateY(-110vh)}
+  body:not(.intro-complete) .badge-stage{overflow:visible}
+  @media(prefers-reduced-motion:reduce){
+    body:not(.intro-complete) .hero > div:first-child{opacity:1;transform:none}
+    body:not(.intro-complete) .swing{transform:none}
+  }
 </style>
 </head>
 <body>
@@ -310,14 +320,6 @@
     year: "2026",
   };
 </script>
-
-<div id="intro">
-  <div class="intro-inner">
-    <div class="intro-name" data-me="name"></div>
-    <div class="intro-sub" data-t="role"></div>
-    <div class="intro-card-slot" aria-hidden="true"></div>
-  </div>
-</div>
 
 <nav id="nav">
   <a href="#top" class="logo" data-me="name"></a>
@@ -522,10 +524,7 @@
     <div class="card-name"><div><div class="n">${ME.name}</div><small data-t="badge.role"></small></div></div>`;
   document.getElementById("badge").innerHTML = badgeHTML;
   document.getElementById("badge2").innerHTML = badgeHTML;
-  const introCard = document.createElement("div");
-  introCard.className = "card intro-card";
-  introCard.innerHTML = badgeHTML;
-  document.querySelector(".intro-card-slot").appendChild(introCard);
+
 
   /* ---- taal wisselen ---- */
   function setLang(lang, animate){
@@ -563,7 +562,7 @@
 
   /* ---- badge-slinger: draait alleen als hij beweegt én zichtbaar is ---- */
   const swing = document.getElementById("swing");
-  let angle = reduce ? 0 : 12, vel = 0, target = 0, dragging = false, lastX = 0, lastT = 0, running = false, visible = true;
+  let angle = 0, vel = 0, target = 0, dragging = false, lastX = 0, lastT = 0, running = false, visible = true;
   function frame(now){
     const dt = lastT ? Math.min((now - lastT) / 16.67, 2) : 1; lastT = now;
     if (dragging) angle += (target - angle) * (1 - Math.pow(0.82, dt));
@@ -654,22 +653,20 @@
 
   /* ---- intro + reveal ---- */
   addEventListener("load", () => {
-    setTimeout(() => {
-      const intro = document.getElementById("intro");
-      if (reduce) { intro.classList.add("done"); return; }
-      const from = introCard.getBoundingClientRect();
-      const to = document.getElementById("badge").getBoundingClientRect();
-      intro.classList.add("leaving");
-      const flight = introCard.animate([
-        { transform: "translate(0,0) scale(1)" },
-        { transform: `translate(${to.left - from.left}px,${to.top - from.top}px) scale(${to.width / from.width},${to.height / from.height})` }
-      ], { duration: 1100, easing: "cubic-bezier(.22,1,.36,1)", fill: "forwards" });
-      flight.finished.then(() => {
-        intro.classList.add("done");
-        document.body.classList.add("intro-complete");
-        setTimeout(start, 300);
-      });
-    }, reduce ? 0 : 1800);
+    const finishEntrance = () => {
+      document.body.classList.add("intro-complete");
+      angle = 0; vel = 0;
+      swing.style.transform = "rotate(0deg)";
+    };
+    if (reduce) { finishEntrance(); return; }
+    const entrance = swing.animate([
+      { transform: "translateY(-110vh) rotate(0deg)", opacity: 1 },
+      { transform: "translateY(0) rotate(0deg)", opacity: 1 }
+    ], { duration: 1600, easing: "cubic-bezier(.22,1,.36,1)", fill: "both" });
+    entrance.finished.then(() => {
+      finishEntrance();
+      entrance.cancel();
+    });
   });
   const io = new IntersectionObserver(es => es.forEach(e => {
     if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); }

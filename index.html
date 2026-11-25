@@ -363,6 +363,22 @@
     .hero .swing{zoom:.78;top:-170px}
     .hero .badge-stage{overflow:visible}
   }
+  /* Demo-balk bovenaan */
+  :root{--bar:34px}
+  body{padding-top:var(--bar)}
+  html{scroll-padding-top:calc(var(--bar) + 72px)}
+  .demo-bar{position:fixed;top:0;left:0;right:0;z-index:60;height:var(--bar);display:flex;align-items:center;justify-content:center;gap:10px;padding:0 16px;
+    background:var(--ink);color:var(--paper);font-size:11px;letter-spacing:.04em;white-space:nowrap;overflow:hidden}
+  .demo-bar b{font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#d9b8a3}
+  nav{top:var(--bar)}
+
+  /* Mobiel: tekst direct onder de hangende kaart */
+  @media(max-width:640px){
+    .demo-bar{font-size:10px;letter-spacing:.02em;gap:8px}
+    .hero{gap:0}
+    .hero .badge-stage{height:436px}
+    .hero > div:first-child{padding-top:14px}
+  }
 </style>
 </head>
 <body>
@@ -379,6 +395,8 @@
     year: "2026",
   };
 </script>
+
+<div class="demo-bar" role="note"><b>Demo</b><span data-t="demo.note"></span></div>
 
 <nav id="nav">
   <a href="#top" class="logo" data-me="name"></a>
@@ -535,7 +553,7 @@
       "contact.text": "Demo portfolio. Profile, projects and contact details are fictional.",
       "contact.cta": "Explore the concepts",
       "demo.label": "Demo portfolio",
-      "demo.note": "Demo · Fictional profile, projects and contact details.",
+      "demo.note": "Fictional profile, projects and contact details.",
     },
     nl: {
       "role": "Merk- en verpakkingsontwerper", "badge.role": "Ontwerper",
@@ -566,7 +584,7 @@
       "contact.text": "Demoportfolio. Profiel, projecten en contactgegevens zijn fictief.",
       "contact.cta": "Bekijk de concepten",
       "demo.label": "Demoportfolio",
-      "demo.note": "Demo · Fictief profiel, projecten en contactgegevens.",
+      "demo.note": "Fictief profiel, projecten en contactgegevens.",
     }
   };
 

@@ -353,6 +353,11 @@
     nav{transition:opacity 1.8s ease .35s,box-shadow .6s var(--ease);transform:none}
     body:not(.intro-complete) nav{transform:none}
   }
+
+  @media(max-width:640px){
+    .hero .badge-stage{height:max(100svh,720px);overflow:visible}
+    .hero > div:first-child{padding-top:100px}
+  }
 </style>
 </head>
 <body>

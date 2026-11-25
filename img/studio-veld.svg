@@ -8,8 +8,8 @@
   <rect x="176" y="278" width="48" height="6" rx="3" fill="#b9ad9b"/>
   <!-- site -->
   <text x="80" y="122" font-family="Georgia, serif" font-size="12" fill="#2a2622">Veld</text>
-  <g font-family="Arial, sans-serif" font-size="5.5" letter-spacing="1.4" fill="#8a7e6e">
-    <text x="236" y="121">PROJECTEN</text><text x="282" y="121">STUDIO</text><text x="312" y="121">CONTACT</text>
+  <g font-family="Arial, sans-serif" font-size="4" letter-spacing=".15" fill="#8a7e6e">
+    <text x="222" y="121">PROJECTEN</text><text x="267" y="121">STUDIO</text><text x="296" y="121">CONTACT</text>
   </g>
   <text x="80" y="168" font-family="Georgia, serif" font-size="22" fill="#2a2622">Bouwen met</text>
   <text x="80" y="192" font-family="Georgia, serif" font-style="italic" font-size="22" fill="#9a5b42">licht en ruimte.</text>

@@ -305,7 +305,6 @@
     body:not(.intro-complete) .swing{transform:none}
   }
 
-  body:not(.intro-complete) nav,
   body:not(.intro-complete) section:not(.hero),
   body:not(.intro-complete) footer{visibility:hidden;opacity:0;pointer-events:none}
   nav{transition:opacity .7s var(--ease),box-shadow .6s var(--ease)}
@@ -319,6 +318,11 @@
 
   .hero > div:first-child .reveal{transform:none;transition-delay:0ms!important}
   @media(prefers-reduced-motion:reduce){.hero > div:first-child{transition:none;transform:none}}
+
+  html{scrollbar-gutter:stable}
+  nav{opacity:1;transform:translateY(0);transition:opacity 1.2s ease .15s,transform 1.4s var(--ease) .15s,box-shadow .6s var(--ease)}
+  body:not(.intro-complete) nav{opacity:0;transform:translateY(-5px);pointer-events:none}
+  @media(prefers-reduced-motion:reduce){nav{transition:none;transform:none}}
 </style>
 </head>
 <body>
@@ -670,7 +674,7 @@
   addEventListener("load", () => {
     const finishEntrance = () => {
       document.body.classList.add("intro-complete");
-      angle = reduce ? 0 : 6; vel = 0;
+      angle = 0; vel = reduce ? 0 : 0.42;
       swing.style.transform = `rotate(${angle}deg)`;
     };
     if (reduce) { finishEntrance(); return; }

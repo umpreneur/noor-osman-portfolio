@@ -234,6 +234,26 @@
     footer{flex-direction:column;align-items:center;text-align:center;gap:16px;padding:26px 20px}
   }
   @media (prefers-reduced-motion:reduce){*{animation-duration:.01s!important;transition:none!important}}
+
+  .btn-contact{background:var(--accent)}
+  .btn-contact:hover{background:var(--accent-dark)}
+  .about{grid-template-columns:320px minmax(0,1fr);gap:clamp(40px,6vw,90px)}
+  .about .card{width:300px;transform:rotate(-5deg)}
+  .about-heading{font-family:var(--serif);font-weight:400;font-size:clamp(36px,4vw,56px);line-height:1.08;margin-bottom:24px}
+  .about-intro{max-width:480px}
+  .about .skills{gap:10px 22px;margin-top:26px;font-size:12px}
+  .portrait{position:relative;overflow:hidden;height:240px}
+  .badge-art{position:relative;width:140px;height:170px;transform:rotate(-15deg);background:var(--accent);border-radius:70px 70px 12px 12px}
+  .badge-art::before{content:"";position:absolute;width:100px;height:100px;border-radius:50%;background:var(--paper);top:35px;left:-35px}
+  .badge-art::after{content:"";position:absolute;width:65px;height:120px;border-radius:40px;background:var(--ink);right:-25px;bottom:-24px;transform:rotate(35deg)}
+  .card-name{margin-top:20px}
+  @media(max-width:860px){.about{grid-template-columns:1fr;gap:48px}.about .card{justify-self:center}}
+  @media(max-width:640px){
+    .about .card{width:min(300px,100%);transform:rotate(-3deg)}
+    .badge-stage .card{transform:none}
+    .about-heading{font-size:38px}
+    .about .skills{gap:10px 16px}
+  }
 </style>
 </head>
 <body>
@@ -282,7 +302,7 @@
     <p class="reveal" data-t="hero.text"></p>
     <div class="cta reveal">
       <a href="#werk" class="btn"><span data-t="hero.cta"></span><span class="arr">→</span></a>
-      <a href="#contact" class="link" data-t="hero.link"></a>
+      <a href="#contact" class="btn btn-contact" data-t="hero.link"></a>
     </div>
   </div>
   <div class="badge-stage" id="stage">
@@ -300,10 +320,9 @@
     <div class="card reveal" id="badge2"></div>
     <div class="reveal">
       <span class="eyebrow" data-t="about.eyebrow"></span>
+      <h2 class="about-heading" data-t="about.heading"></h2>
       <p class="about-intro" data-t="about.title"></p>
-      <div class="fields">
-        <div class="field"><span data-t="f.edu"></span><b data-t="edu"></b></div>
-      </div>
+      
       <div class="skills" data-t="skills"></div>
     </div>
   </div>
@@ -352,7 +371,6 @@
 <!-- ====== PROCESS ====== -->
 <section id="werkwijze">
   <div class="center reveal">
-    <span class="eyebrow" data-t="process.eyebrow"></span>
     <h2 class="h2" data-t="process.title"></h2>
   </div>
   <div class="steps">
@@ -394,10 +412,11 @@
       "hero.text": "Brand identities and packaging for makers, food brands and studios.",
       "hero.cta": "View my work", "hero.link": "Get in touch",
       "about.eyebrow": "About",
-      "about.title": "I’m Noor, a graphic designer based in Rotterdam. I design brand identities and packaging, with an eye for typography and detail.",
+      "about.heading": "Brands with a <em>distinctive face.</em>",
+      "about.title": "A strong brand is recognised and remembered. I turn your story into a distinctive identity and packaging that stands out, sparks curiosity and feels true to your brand.",
       "f.name": "Name", "f.role": "Role", "f.location": "Based in", "f.edu": "Studied", "f.email": "Email",
       "verified": "<em>Design concepts.</em>",
-      "skills": list(["Brand identity", "Packaging", "Typography", "Print", "Illustration", "Web design"]),
+      "skills": list(["Brand identity", "Packaging design", "Art direction"]),
       "work.eyebrow": "Fictional projects",
       "work.title": "Selected <em>work</em>",
       "view": "Demo project",
@@ -424,10 +443,11 @@
       "hero.text": "Merkidentiteiten en verpakkingen voor makers, voedingsmerken en studio’s.",
       "hero.cta": "Bekijk mijn werk", "hero.link": "Neem contact op",
       "about.eyebrow": "Over mij",
-      "about.title": "Ik ben Noor, grafisch ontwerper in Rotterdam. Ik ontwerp merkidentiteiten en verpakkingen, met oog voor typografie en detail.",
+      "about.heading": "Merken met een <em>eigen gezicht.</em>",
+      "about.title": "Een sterk merk herken je én onthoud je. Ik vertaal jouw verhaal naar een uitgesproken identiteit en verpakkingen die opvallen, nieuwsgierig maken en bij je merk passen.",
       "f.name": "Naam", "f.role": "Rol", "f.location": "Locatie", "f.edu": "Opleiding", "f.email": "E-mail",
       "verified": "<em>Ontwerpconcepten.</em>",
-      "skills": list(["Merkidentiteit", "Verpakking", "Typografie", "Drukwerk", "Illustratie", "Webdesign"]),
+      "skills": list(["Merkidentiteit", "Verpakkingsontwerp", "Artdirection"]),
       "work.eyebrow": "Fictieve projecten",
       "work.title": "Uitgelicht <em>werk</em>",
       "view": "Demoproject",
@@ -457,7 +477,8 @@
     <div class="hole"></div>
     <div class="card-top"><span>Portfolio ’${ME.year.slice(2)}</span></div>
     
-    <div class="card-name"><div><div class="n">${ME.name}</div><small data-t="badge.role"></small></div><div class="id">${ME.year}</div></div>`;
+    <div class="portrait" aria-hidden="true"><div class="badge-art"></div></div>
+    <div class="card-name"><div><div class="n">${ME.name}</div><small data-t="badge.role"></small></div></div>`;
   document.getElementById("badge").innerHTML = badgeHTML;
   document.getElementById("badge2").innerHTML = badgeHTML;
 

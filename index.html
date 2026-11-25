@@ -336,6 +336,23 @@
     .hero .badge-stage{grid-row:1;width:100%}
     .hero > div:first-child{grid-row:2}
   }
+
+  /* Phone-only: keep the whole swinging badge above the introduction. */
+  @media(max-width:640px){
+    .hero{padding-top:80px;gap:24px}
+    .hero .badge-stage{height:470px;padding-top:0;overflow:visible}
+    .hero .swing{top:-260px}
+    .hero > div:first-child{position:relative}
+  }
+
+  @media(max-width:640px){
+    .hero{padding-top:0;gap:40px}
+    .hero .badge-stage{height:max(100svh,620px);padding-top:0;overflow:visible}
+    .hero .swing{top:-170px}
+    .hero > div:first-child{grid-row:2;padding-top:0}
+    nav{transition:opacity 1.8s ease .35s,box-shadow .6s var(--ease);transform:none}
+    body:not(.intro-complete) nav{transform:none}
+  }
 </style>
 </head>
 <body>
